@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kumbh+Sans:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:wght@300;400;600&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Mono:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+    background:linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+    background-repeat: no-repeat;
+    padding: 14.8rem 2.4rem 11rem ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-div {
+    position: relative;
+    border-radius: 2.3rem;
+    background: #FFF;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.50);
+    padding:0 2.4rem 4.8rem;
+    text-align: center;
+    max-width: 40rem;
+}
+.question-div * {
+    cursor: pointer;
+}
+
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    margin-top:3.8rem;
+    gap: 1.9rem;
+}
+.question-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+}
+.answer {
+    text-align: left;
+    display: none;
+    width: 26rem;
+    color: rgb(61, 120, 13);
+}
+.arrow-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 0.8rem;
+    height: 0.4rem;
+}
+.woman-img {
+    width: 23.7rem;
+    height: 18rem;
+    position: absolute;
+    left: 4.5rem;
+    top: -10.5rem;
+}
+.woman-shadow {
+    position: absolute;
+    left: 4.5rem;
+    top: -8.5rem;  /* Adjust position */
+    width: 25rem;
+    height: 20rem;
+    background-size: contain;
+    opacity: 0.9; /* Adjust shadow intensity */
+    transform: rotate(180deg); /* If you need to rotate the shadow */
+}
+    
+
+
+h2 {
+    color: #1E1F36;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-top: 13.2rem;
+}
+h3 {
+    color: #4B4C5F;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+p {
+    color: #787887;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8rem
+}
+hr {
+    width: 28.5rem;
+    height:1px ;
+    background-color:#E8E8EA;
+    border: none;
+}
