@@ -13,23 +13,22 @@ questions.forEach(question => {
             let Arrow=closest.children[0].children[1]
             let Answer=closest.children[1]
 
-            if(active) {
-                active.children[0].children[0].style.fontWeight='normal'
-                active.children[0].children[1].style.transform='rotate(0)'
-                active.children[1].style.display='none'
-            }
-    
-            if(active === closest) {
+            if(closest === active) {
                 Question.style.fontWeight='normal'
                 Arrow.style.transform='rotate(0)'
                 Answer.style.display='none'
                 active=null;
-    
             } else {
+                if(active) {
+                    active.children[0].children[0].style.fontWeight='normal'
+                    active.children[0].children[1].style.transform='rotate(0)'
+                    active.children[1].style.display='none'
+                    active=null
+                }
                 Question.style.fontWeight='bold'
                 Arrow.style.transform='rotate(180deg)'
                 Answer.style.display='block'
-                active=closest
+                active=closest;
             }
         }
     })
