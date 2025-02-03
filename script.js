@@ -8,34 +8,29 @@ let active=null;
 questions.forEach(question => {
     question.addEventListener('click',()=> {
         let closest=question.closest('.question-div')
-        let Question=closest.children[0].children[0]
-        let Arrow=closest.children[0].children[1]
-        let Answer=closest.children[1]
+        if(closest) {
+            let Question=closest.children[0].children[0]
+            let Arrow=closest.children[0].children[1]
+            let Answer=closest.children[1]
 
-        Question.style.fontWeight='bold'
-        Arrow.style.transform='rotate(180deg)'
-        Answer.style.display='block'
-
-        if(active) {
+            if(active) {
+                active.children[0].children[0].style.fontWeight='normal'
+                active.children[0].children[1].style.transform='rotate(0)'
+                active.children[1].style.display='none'
+            }
+    
             if(active === closest) {
                 Question.style.fontWeight='normal'
                 Arrow.style.transform='rotate(0)'
                 Answer.style.display='none'
-                active=null
+                active=null;
+    
+            } else {
+                Question.style.fontWeight='bold'
+                Arrow.style.transform='rotate(180deg)'
+                Answer.style.display='block'
+                active=closest
             }
-            let activeQuest=active.children[0].children[0]
-            let activeArrow=active.children[0].children[1]
-            let activeAnswer=active.children[1]
-
-            activeQuest.style.fontWeight='normal'
-            activeArrow.style.transform='rotate(0)'
-            activeAnswer.style.display='none'
-            active=closest;
-        } else {
-            Question.style.fontWeight='bold'
-            Arrow.style.transform='rotate(180deg)'
-            Answer.style.display='block'
-            active=closest
         }
     })
 })
